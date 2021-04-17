@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fetch Planets</title>
+    <script>
+        window.addEventListener("load", function() {
+                    //TODO: fetch planets JSON
+                    const fetchPromise = fetch("https://handlers.education.launchcode.org/static/planets.json");
+
+                    fetchPromise.then(function(response) {
+                        const jsonPromise = response.json;
+                        jsonPromise.then(function(json) {
+                            console.log(json);
+
+                        })
+
+
+
+
+                    });
+    </script>
+</head>
+
+<body>
+    <h1>Destination</h1>
+    <div id="destination">
+        <h3>Planet</h3>
+    </div>
+</body>
+
+</html>
